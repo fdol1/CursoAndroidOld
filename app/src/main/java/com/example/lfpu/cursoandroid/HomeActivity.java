@@ -3,14 +3,18 @@ package com.example.lfpu.cursoandroid;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     ListView lstLista;
     List<String> lstAndroidVersion;
@@ -26,15 +30,21 @@ public class HomeActivity extends AppCompatActivity {
         lstLista = findViewById(R.id.lst_lista);
 
         lstAndroidVersion = new ArrayList<>();
-        lstAndroidVersion.add("hola");
-        lstAndroidVersion.add("mundo");
-        lstAndroidVersion.add("android");
-        lstAndroidVersion.add("java");
+        lstAndroidVersion.add("Pie");
+        lstAndroidVersion.add("Oreo");
+        lstAndroidVersion.add("Lollipop");
 
         ArrayAdapter arrayAdapter = new ArrayAdapter(
                 this,android.R.layout.simple_list_item_1,lstAndroidVersion);
 
         lstLista.setAdapter(arrayAdapter);
 
+        lstLista.setOnItemClickListener(this);
+
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Log.i("APP",lstAndroidVersion.get(position));
     }
 }
