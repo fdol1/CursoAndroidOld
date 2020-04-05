@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CursoAndroid</string>
+
+    <string name="btn_iniciar">Iniciar</string>
+    <string name="edt_usuario">Usuario</string>
+    <string name="edt_clave">Clave</string>
 </resources>
