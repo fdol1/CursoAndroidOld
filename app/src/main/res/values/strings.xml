@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">CursoAndroid</string>
+
+    <string name="btn_login">Iniciar sesión</string>
+    <string name="cbx_deporte">Deporte</string>
+    <string name="cbx_video_juego">Video juegos</string>
+    <string name="hint_clave">Clave</string>
+    <string name="hint_mail">Email</string>
+    <string name="hint_tel">Telefono</string>
+    <string name="hint_num">Numero</string>
+    <string name="rdbtn_mujer">Mujer</string>
+    <string name="rdbtn_hombre">Hombre</string>
+    <string name="rdbtn_indefinido">Indefinido</string>
+    <string name="btn_uno">1</string>
+
 </resources>
