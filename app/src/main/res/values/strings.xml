@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CursoAndroid</string>
+    <string name="edt_email">Ingrese su correo</string>
+    <string name="edt_clave">Ingrese su clave</string>
 </resources>
