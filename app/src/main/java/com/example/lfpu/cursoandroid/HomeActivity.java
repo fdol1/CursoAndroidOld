@@ -46,5 +46,7 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Log.i("APP",lstAndroidVersion.get(position));
+        String androidVersion = lstAndroidVersion.get(position);
+        Toast.makeText(this,"Version: "+ androidVersion,Toast.LENGTH_LONG).show();
     }
 }
