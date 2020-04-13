@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.lfpu.cursoandroid.RestauranteFragment.OnListFragmentInteractionListener;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -52,6 +53,12 @@ public class MyRestauranteRecyclerViewAdapter extends RecyclerView.Adapter<MyRes
         //        .load(holder.mItem.getUrlFoto())
         //        .centerCrop()
         //        .into(holder.imgFoto);
+
+        Picasso.get()
+                .load(holder.mItem.getUrlFoto())
+                .resize(400,150)
+                .centerCrop()
+                .into(holder.imgFoto);
 
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
