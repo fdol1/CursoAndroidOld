@@ -12,9 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.lfpu.cursoandroid.dummy.DummyContent;
-import com.example.lfpu.cursoandroid.dummy.DummyContent.DummyItem;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -82,7 +79,7 @@ public class RestauranteFragment extends Fragment {
             restauranteList = new ArrayList<>();
             restauranteList.add(new Restaurante("andres carne de res","www.google.com","calle 1",0));
             //Asociamos adaptador a recyclerView, que es el gestor de la lista
-            adaptarRestaurantes = new MyRestauranteRecyclerViewAdapter(restauranteList.ITEMS, mListener);
+            adaptarRestaurantes = new MyRestauranteRecyclerViewAdapter(getActivity(), restauranteList, mListener);
             recyclerView.setAdapter(adaptarRestaurantes);
         }
         return view;
@@ -118,6 +115,6 @@ public class RestauranteFragment extends Fragment {
      */
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(DummyItem item);
+        void onListFragmentInteraction(Restaurante item);
     }
 }
