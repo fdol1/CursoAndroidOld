@@ -77,7 +77,13 @@ public class RestauranteFragment extends Fragment {
 
             //Lista de elementos (restaurante)
             restauranteList = new ArrayList<>();
-            restauranteList.add(new Restaurante("andres carne de res","www.google.com","calle 1",0));
+
+            restauranteList.add(new Restaurante("andres carne de res","https://www.infobae.com/new-resizer/55JzgrKZukIsYGXCpK7QV8kyDtU=/750x0/filters:quality(100)/s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/11/28204128/uruguay-marihuana.jpg","calle 1",0));
+            restauranteList.add(new Restaurante("andres carne de res 2","https://www.infobae.com/new-resizer/55JzgrKZukIsYGXCpK7QV8kyDtU=/750x0/filters:quality(100)/s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/11/28204128/uruguay-marihuana.jpg","calle 1",5));
+            restauranteList.add(new Restaurante("andres carne de res 3","http://192.168.56.1:8080/web_services_fotos1/fotos/foto.jpg","calle 1",0));
+            restauranteList.add(new Restaurante("andres carne de res 4","http://192.168.56.1:8080/web_services_fotos1/fotos/foto2 .jpg","calle 1",5));
+
+
             //Asociamos adaptador a recyclerView, que es el gestor de la lista
             adaptarRestaurantes = new MyRestauranteRecyclerViewAdapter(getActivity(), restauranteList, mListener);
             recyclerView.setAdapter(adaptarRestaurantes);

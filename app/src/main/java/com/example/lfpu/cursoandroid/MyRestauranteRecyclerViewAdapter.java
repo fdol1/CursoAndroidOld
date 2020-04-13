@@ -22,12 +22,12 @@ import java.util.List;
  */
 public class MyRestauranteRecyclerViewAdapter extends RecyclerView.Adapter<MyRestauranteRecyclerViewAdapter.ViewHolder> {
 
-    private Context context;
+    private Context ctx;
     private final List<Restaurante> mValues;
     private final OnListFragmentInteractionListener mListener;
 
     public MyRestauranteRecyclerViewAdapter(Context context,List<Restaurante> items, OnListFragmentInteractionListener listener) {
-        context = context;
+        ctx = context;
         mValues = items;
         mListener = listener;
     }
@@ -48,10 +48,11 @@ public class MyRestauranteRecyclerViewAdapter extends RecyclerView.Adapter<MyRes
         holder.txtDireccion.setText(holder.mItem.getDireccion());
         holder.ratingBarValoracion.setRating(holder.mItem.getValoracion());
 
-        Glide.with(context)
-                .load(holder.mItem.getUrlFoto())
-                .centerCrop()
-                .into(holder.imgFoto);
+        //Glide.with(ctx)
+        //        .load(holder.mItem.getUrlFoto())
+        //        .centerCrop()
+        //        .into(holder.imgFoto);
+
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
